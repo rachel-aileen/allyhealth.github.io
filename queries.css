@@ -1,0 +1,558 @@
+@media (max-width: 1200px){
+
+    @import url('https://fonts.cdnfonts.com/css/canela-text-trial');
+    @import url('https://fonts.cdnfonts.com/css/hk-groteks');
+    @import url('https://fonts.cdnfonts.com/css/sweet-sans-pro?weight=400,500,700,900');
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
+    
+    @font-face{
+      font-family: 'Sweet Sans Pro';
+      src: url('/sweet-sans-pro-fonts/SweetSansProLight.otf');
+      font-weight: normal;
+    }
+    
+    @font-face{
+      font-family: 'Sweet Sans Pro, Bold';
+      src: url('/sweet-sans-pro-fonts/SweetSansProBold.otf');
+      font-weight: bold;
+    }
+    
+      :root {
+        /* Font Sizes & Family */
+        --primary-font: 'Canela Text Trial', sans-serif;
+        --secondary-font: 'HK Grotesk', sans-serif;  
+        --button-font: "Sweet Sans Pro, Bold";
+        --button-font-light: 'Sweet Sans Pro', serif;
+      
+      
+        /* Color Variables */
+        --primary-color: #DB9BB7;
+        --primary-color-hover: #92749E;
+        --secondary-color: #B09BB9;
+        --tertiary-color: #FFF5FC;
+        --text-color: #435A68;
+        --text-color-dark: #787D98;
+        --text-color-light: #F1E8F4;
+        --secondary-text-color: #75858F;
+        --tertiary-text-color: #667A86;
+        --border-color: #E0B2C6;
+        --white-color: #FFFEFC;
+        --section-bg: #F0E3E9;
+      
+        /* transition */
+        --tran-0-2: 0.2s;
+        --tran-0-3: 0.3s;
+        --tran-0-5: 0.5s;
+      }
+    
+      /*////////// Navigation Bar //////////*/
+    
+      header{
+    
+        height: 12vh;
+      }
+        header .navigation .menu{
+          position: fixed;
+          display: block;
+          background: var(--tertiary-color);
+          min-width: 100%;
+          height: 100vh;
+          top: 0;
+          right: -100%;
+          padding: 90px 50px;
+          visibility: hidden;
+          overflow-y: auto;
+          transition: 0.5s;
+          transition-property: right, visibility;
+          
+        }
+    
+        .logo{
+          width: 9.5em !important;
+          margin-left: 16px;
+        }
+      
+        header.sticky .navigation{
+          line-height: 75px;
+        }
+      
+        header .navigation .menu.active{
+          right: 0;
+          visibility: visible;
+        }
+      
+        .menu-item{
+          position: relative;
+        }
+      
+      
+        .close-btn{
+          position: absolute;
+          background: url(https://firebasestorage.googleapis.com/v0/b/ally-health-obgyn.appspot.com/o/close.png?alt=media&token=93b8d1fe-14c2-497d-86bf-9d7df8e205d3)no-repeat;
+          width: 40px;
+          height: 40px;
+          background-size: 40px;
+          background-position: center;
+          top: 0;
+          right: 0;
+          margin: 25px;
+          cursor: pointer;
+        }
+      
+        .menu-btn{
+          background: url(https://firebasestorage.googleapis.com/v0/b/ally-health-obgyn.appspot.com/o/menu.png?alt=media&token=3f47b463-8293-4b0c-add1-7cbb7ea037b1) no-repeat;
+          width: 40px;
+          height: 40px;
+          background-size: 40px;
+          background-position: center;
+          cursor: pointer;
+          display: block;
+        }
+      
+        header{
+          padding: 15px 20px;
+        }
+      
+        header.sticky{
+          padding: 10px 20px;
+        }
+    
+        .menu-item > a{                              
+          font-size: 13px;
+          color: green;
+          font-family: var(--button-font-light);
+        }
+    
+        /* ////////// Submenu ////////// */
+    
+        .sub-menu {
+          display: none;
+          list-style: none;
+         padding-left: 6%;
+          background: var(--tertiary-color);
+        }
+      
+        .sub-menu li {
+          padding: 0% 8%; 
+        }
+      
+        .sub-menu li a {
+          color: var(--secondary-text-color);
+          text-decoration: none;
+          font-size: 12px;
+          font-family: var(--button-font-light);
+          text-transform: uppercase;
+          letter-spacing: 2px;
+      
+        }
+    
+    
+    
+    /* ///////Hero Section ///////*/
+    
+    .hero-image {
+      height: 50vh; /* Sets the height of the hero image to be automatic */
+    }
+    
+    
+    .hero-title, .hero-subtitle, .home-button {
+      display: none; /* This will make both elements disappear */
+    }
+    
+    
+      .cta-button {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 24px;
+        padding-right: 24px;
+        letter-spacing: 1px;
+        border: none;
+        font-size: 14px;
+      
+      }
+    
+      /*////////// Overview ////////// */
+    
+      .overview-popup {
+        margin-top: 20%;
+        font-size: 28px;
+        font-family: 'Canela Text Trial', sans-serif; 
+        font-weight: 100;
+        color: #787D98;
+        padding-right: 5%;
+        padding-left: 5%;
+        line-height: 1.4;
+      }
+    
+      .overview {
+        margin-top: 5%;
+      }
+    
+      .heading .section-heading {
+        font-size: 14px;
+        margin-top: 48px;
+        padding-bottom: 0px;
+      }
+    
+      .heading p {
+        font-size: 17px;
+        margin-bottom: 0px;
+      }
+    
+      .container {
+        width: 100%;
+        margin: 0 auto;
+      }
+    
+      .container .overview-container {
+        padding: 0px;
+      }
+    
+      .overview {
+        padding: 20px;
+        flex-direction: column;
+      }
+      .overview-image {
+        margin-right: 0px;
+        margin-bottom: 4%;
+      }
+    
+      .overview-content {
+        padding: 0px;
+        font-size: 16px;
+      }
+    
+     
+    
+    /*////////// Services //////////*/
+    
+       .services-container {
+        margin-top: 56px;
+        max-width: 100%;
+      }
+    
+      .row {
+        justify-content: space-evenly;
+      }
+    
+      .card {
+        margin-right: 20px;
+        margin-left: 20px;
+        padding: 24px;
+        width: 100%;
+        margin-bottom: 24px;
+      }
+    
+      .custom-icon {
+        margin-top: 8px;
+        margin-bottom: 8px;
+      }
+    
+      .card-text {
+        margin-bottom: 20px;
+        padding-left: 8px;
+        padding-right: 8px;
+      }
+    
+    
+       /* ////////// Testimonials ////////// */
+       .testimonials-container {
+        height: 100vh;
+      }
+      
+       .slide .details {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-left: 50px;
+        margin-right: 50px;
+      }
+    
+      .slide .quote-icon {
+        font-size: 64px;
+      }
+    
+      .details .name {
+        font-size: 23px;
+        font-weight: 100;
+        margin-top: 20px;
+        margin-left: 24px;
+        margin-right: 24px;
+        margin-bottom: 32px !important;
+        text-align: center;
+        line-height: 1.5;
+      }
+    
+      .details .job {
+        font-size: 15px;
+        color: var(--text-color);
+        position: relative;
+        text-transform: uppercase;
+        font-family: "Sweet Sans Pro", sans-serif;
+        letter-spacing: 0.5px;
+      }
+    
+      .nav-btn {
+        height: 35px;
+        width: 35px;
+        margin-left: 16px;
+        margin-right: 16px;
+    
+      }
+    
+    
+    /* ////////// Virtual Consultation ////////// */
+    
+    .consultation {
+      margin-top: 0px;
+      padding-top: 8%;
+      padding-bottom: 8%;
+      flex-direction: column-reverse;
+    }
+    
+    .consultation-content {
+      flex: 1;
+      padding-left: 5%;
+      padding-right: 5%;
+    }
+    .consultation-content .section-title {
+      font-size: 23px;
+      margin-bottom: 8%;
+    }
+    
+    .consultation-content .section-heading {
+      margin-bottom: 8%;
+    }
+    
+    .consultation-content .section-text {
+      font-size: 17px;
+      margin-bottom: 8%;
+      padding-right: 0%;
+    }
+    
+    .consultation-image {
+      margin-bottom: 4%;
+      width: 100%;
+    }
+    
+    
+    /*////////// Philosophy & Principles //////////*/
+    
+       .philosophy-container {
+        margin-top: 8%;
+        max-width: 100%;
+        padding-top: 1%;
+      }
+    
+      .row.philosophy {
+        justify-content: space-evenly;
+      }
+    
+      .card.philosophy {
+        margin-right: 2%;
+        margin-left: 2%;
+        padding: 24px;
+        width: 100%;
+        margin-bottom: 24px;
+        height: 500px;
+      }
+    
+      .card-title.philosophy {
+        padding-bottom: 2%;
+      }
+    
+      .card-text {
+        margin-bottom: 20px;
+        padding-left: 8px;
+        padding-right: 8px;
+      }
+    
+    
+    
+       /*////////// Pregnancy //////////*/
+      .pregnancy {
+        margin-top: 0px;
+        padding-top: 8%;
+        padding-bottom: 8%;
+        flex-direction: column-reverse;
+      }
+      
+      .pregnancy-content {
+        flex: 1;
+        padding-left: 5%;
+        padding-right: 5%;
+      }
+      .pregnancy-content .section-title {
+        font-size: 23px;
+        margin-bottom: 8%;
+      }
+      
+      .pregnancy-content .section-heading {
+        margin-bottom: 8%;
+      }
+      
+      .pregnancy-content .section-text {
+        font-size: 17px;
+        margin-bottom: 8%;
+        padding-right: 0%;
+      }
+      
+      .pregnancy-image {
+        margin-bottom: 4%;
+        width: 100%;
+      }
+    
+      .pregnancy img {
+        padding-left: 4%;
+        padding-right: 4%;
+      }
+    
+    
+    /*////////// Begin Journey //////////*/
+    
+        .begin-journey-container {
+          margin-top: 56px;
+          max-width: 90%;
+        }
+      
+        .row.begin-journey {
+          justify-content: space-evenly;
+        }
+      
+        .card.begin-journey {
+          margin-right: 16px;
+          margin-left: 16px;
+          padding: 24px;
+          width: 100%;
+          margin-bottom: 24px;
+        }
+    
+        .card.begin-journey-line {
+          margin-right: 16px;
+          margin-left: 16px;
+          padding: 20px 20px;
+          width: 20%;
+          margin-bottom: 36px;
+          border-right: 0px;
+          border-left: 0px;
+        }
+      
+        .custom-icon {
+          margin-top: 2%;
+          margin-bottom: 8%;
+        }
+      
+        .card-text {
+          margin-bottom: 20px;
+          padding-left: 8px;
+          padding-right: 8px;
+        }
+      
+    
+       /* ////////// Schedule Appointment ////////// */
+       .wrap {
+        margin-right: 16px;
+        margin-left: 16px;
+        margin-top: 0px;
+      }
+    
+      .appointment-title {
+        padding: 4%;
+      }
+    
+      .appointment-content {
+        height: 25vh;
+        margin-top: 6%;
+        padding-top: 2%;
+      padding-bottom: 2%;
+      }
+    
+      .appointment-content {
+        height: 35vh;
+      }
+      
+      .appointment-title {   
+        font-size: 24px;
+        padding: 20px;
+      }
+      
+      .cta-button {
+        padding: 20px 32px;
+     
+      }
+    
+      /* ////////// Footer ////////// */
+    
+      footer {
+        z-index: 1;
+      }
+    
+    
+      .footer-content {
+        justify-content: center;
+        align-items: center;
+        margin: auto; 
+        padding-top: 15%;
+        padding-bottom: 0%;
+        flex-direction: column;
+      }
+    
+      
+    .footer-section {
+      width: 100%;
+     }
+    
+    .footer-section.links {
+      display: flex;
+      justify-content: space-around; /* This will space out the links equally */
+      align-items: center;
+      flex-wrap: wrap; /* Allow the links to wrap if needed */
+    }
+    
+    .footer-section.links a {
+        padding-bottom: 10%;
+      }
+    
+    .footer-section.logo {
+        margin-left: 0;
+        margin-right: 0%;
+        margin-bottom: 7%;
+        margin-top: 5%;
+      }
+    
+    .footer-logo {
+    height: 3.5em;
+    }
+    
+    .footer-section.back-to-top a {
+      margin-bottom: 6%;
+      transition: var(--tran-0-3);
+    }
+    
+    .footer-section.socials {
+      display: flex; 
+      flex-direction: row; 
+      margin-bottom: 8%;
+    }
+    
+    .footer-section.socials a {
+      display: inline-block;
+      margin: 0 4%;
+      font-size: 1.2rem;
+    }
+    
+    .footer-bottom {
+      display: flex; 
+      flex-direction: column; /* Stack children vertically */
+      border-top: none;
+      padding-bottom: 6%; /* Add some padding at the bottom if needed */
+    }
+    
+    .footer-bottom p {
+      margin-bottom: 8%; /* Add some space between the p elements */
+      width: 100%; /* Full width to occupy its own line */
+    }
+      
+      }
+            

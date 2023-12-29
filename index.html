@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ally Health</title>
+
+<!-- CSS -->
+<link
+rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+/>
+<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="queries.css" />
+<link href="https://fonts.cdnfonts.com/css/sweet-sans-pro" rel="stylesheet">
+<link rel="icon" type="image/png" href="images/favicon.png">
+                
+
+
+<!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+  
+<!-- Boxicons CSS -->
+    <link
+    href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+    rel="stylesheet"
+     />
+  
+<!-- Cloudflare -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+  
+<!-- Font Awesome -->
+<script src="https://kit.fontawesome.com/be8e761534.js" crossorigin="anonymous"></script>
+
+
+
+
+<!-- Javascript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" charset="utf-8"></script>
+  </head>
+
+
+<body>
+<!-- Navigation Bar -->
+    <header>
+      <a href="index.html"><img src="https://firebasestorage.googleapis.com/v0/b/ally-health-obgyn.appspot.com/o/logo.png?alt=media&token=5c0d0724-1007-4726-b8c4-4fef7dd62796" class="logo" alt=""></a>
+      <div class="navigation">
+        <ul class="menu">
+          <div class="close-btn"></div>
+          <li class="menu-item"><a href="index.html" class="active">Home</a></li>
+          <li class="menu-item"><a href="about.html">About</a></li>
+          <li class="menu-item">
+            <a class="sub-btn" href="services.html">Services </a>
+            <!-- Submenu -->
+              <ul class="sub-menu">
+                <li><a href="services.html">Contraception</a></li>
+                <li><a href="menopause.html">Menopause</a></li>
+                <li><a href="pap-smear.html">Pap Smear</a></li>
+                <li><a href="pregnancy.html">Pregnancy</a></li>
+                <li><a href="uti-treatment.html">UTI Treatment</a></li>
+                <li><a href="wellness-exam.html">Wellness Exam</a></li>
+              </ul>
+            
+          </li>
+          
+          <li class="menu-item"><a href="fees.html">Fees</a></li>
+          <li class="menu-item"><a href="forms.html">Forms</a></li>
+          <li class="menu-item"><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="menu-btn"></div>
+    </header>
+<!-- Navbar Javascript -->
+  <script type="text/javascript">
+    $(document).ready(function() {
+        // Prevent default click action for 'Services' link on smaller screens
+        $(".sub-btn").click(function(e) {
+            if ($(window).width() < 1200) {
+                e.preventDefault(); // Prevent navigation
+                $(this).next(".sub-menu").slideToggle();
+            }
+        });
+
+        // Responsive navigation menu toggle
+        var menu = document.querySelector(".menu");
+        var menuBtn = document.querySelector(".menu-btn");
+        var closeBtn = document.querySelector(".close-btn");
+
+        menuBtn.addEventListener("click", () => {
+            menu.classList.add("active");
+        });
+
+        closeBtn.addEventListener("click", () => {
+            menu.classList.remove("active");
+        });
+
+        // Sticky header on scroll
+        window.addEventListener("scroll", function() {
+            var header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 0);
+        });
+
+        // Hide sub-menu on window resize if width is greater than 1200px
+        $(window).resize(function() {
+            if ($(window).width() > 1200) {
+                $(".sub-menu").css('display', 'none');
+            }
+        });
+
+        // Add 'active' class to the 'Services' link if on Services page
+        var servicesLink = document.querySelector('.menu-item a[href="services.html"]');
+        if (window.location.href.includes('services.html')) {
+            servicesLink.classList.add('active');
+        }
+    });
+  </script>
+  
+
+ <!-- Hero Section -->
+
+ <div class="hero-image">
+  <div class="hero-text-container">
+    <h1 class="hero-title">Women's healthcare
+      you can trust.</h1>
+      <span class="hero-subtitle">Serving women in Southern California and beyond.</span>
+      <button class="home-button">Schedule Appointment</button>    
+  </div>
+  </div>
+
+<!-- Mobile Hero Section -->
+<div class="mobile-hero-container">
+  <h1 class="mobile-title">Women's healthcare
+    you can trust.</h1>
+    <span class="mobile-subtitle">Serving women in Southern California and beyond.</span>
+    <button class="mobile-button">Schedule Appointment</button>    
+</div>
+
+ <!-- Overview -->
+ <h6 class="overview-popup reveal">You deserve a journey through womanhood enriched with care, comfort, and understanding.</h6>
+ <div class="container overview-container ">
+   <section class="overview">
+    <div class="overview-image scroll-fade-in-effect">
+      <img src="https://firebasestorage.googleapis.com/v0/b/ally-health-obgyn.appspot.com/o/overview-img.png?alt=media&token=21b0d8f4-5fc0-4835-ac33-2bd7b856c0be" alt="overview-image">
+    </div>
+    <div class="overview-content js-scroll slide-right">
+      <h2 class="section-title">Ally Health cherishes the health of all women.</h2>
+      <p class="section-text">We believe in building lasting relationships based 
+        on trust and empathy, offering personalized care that respects your unique
+         health conditions. Our goal is to ensure every woman feels comprehensively cared for, 
+         prioritizing her health and well-being.</p>
+        <button class="secondary-cta-button">Find Your California OBGYN</button>
+    </div>
+    
+   </section>
+ </div>
+
+
+
+
+
+<!-- Testimonials -->
+   <div class="container testimonials-container">
+    <div class="testimonial mySwiper">
+      <div class="testi-content swiper-wrapper">
+        <!-- Testimonial #1 -->
+        <div class="slide swiper-slide">
+          <i class="bx bxs-quote-alt-left quote-icon"></i>
+
+          <div class="details">
+            <span class="name"
+              >The level of personal attention at this clinic is unmatched. Truly grateful for all their care
+              and support throughout my pregnancy. </span
+            >
+            <span class="job">EMMA</span>
+          </div>
+        </div>
+        <!-- Testimonial #2 -->
+        <div class="slide swiper-slide">
+          <i class="bx bxs-quote-alt-left quote-icon"></i>
+
+          <div class="details">
+            <span class="name">
+              Warm, welcoming atmosphere with top-notch medical care. 
+              Made my experience absolutely wonderful and easy. 
+            </span>
+
+            <span class="job">KIMBERLY</span>
+          </div>
+        </div>
+        <!-- Testimonial #3 -->
+        <div class="slide swiper-slide">
+          <i class="bx bxs-quote-alt-left quote-icon"></i>
+
+          <div class="details">
+            <span class="name">
+              Truly exceptional service- caring, efficient, and professional. 
+              They made my appointments less stressful and more relaxing.
+            </span>
+
+            <span class="job">NATALIE</span>
+          </div>
+        </div>
+        <!-- Testimonial #4 -->
+        <div class="slide swiper-slide">
+          <i class="bx bxs-quote-alt-left quote-icon"></i>
+
+          <div class="details">
+            <span class="name">
+              The support provided by this clinic was outstanding. 
+              They played a huge part in my positive pregnancy experience.
+            </span>
+
+            <span class="job">MARY</span>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-button-next nav-btn"></div>
+      <div class="swiper-button-prev nav-btn"></div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Footer -->
+<footer>
+  <div class="footer-content">
+      <div class="footer-section links">
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Services</a>
+          
+      </div>
+      <div class="footer-section links">
+          <a href="#">Fees</a>
+          <a href="#">Forms</a>
+          <a href="#">Contact</a>
+        
+      </div>
+
+      <!-- Footer Logo -->
+      <div class="footer-section logo">
+          
+          <a href="index.html"><img src="https://firebasestorage.googleapis.com/v0/b/ally-health-obgyn.appspot.com/o/footer-logo.png?alt=media&token=a8f370c9-4fd5-49d0-bb05-893448349927" class="footer-logo" alt=""></a>
+      </div>
+      <div class="footer-section back-to-top">
+          <a href="#top" class="scrollUp-btn" flex>Scroll back up!</a>
+      </div>
+      <div class="footer-section socials">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+  </div>
+    <!-- Footer Bottom -->
+  <div class="footer-bottom">
+      <p>&copy; Ally Health OBGYN Group 2024</p>
+      <p class="welldone-link">Brand & Website by Welldone</p>
+  </div>
+</footer>
+
+
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+    
+
+  </body>
+</html>
+
+      
